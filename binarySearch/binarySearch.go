@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func binarySearchRecursiveOption(searchField []int, target int) (index int, searchCount int) {
@@ -37,4 +38,17 @@ func main() {
 			fmt.Print("s\n\n")
 		}
 	}
+
+	testField := make([]int, 10000000)
+	for i := range testField {
+		testField[i] = i
+	}
+
+	start := time.Now()
+	for i := 0; i < 100; i++ {
+		binarySearchRecursiveOption(testField, 7777777)
+	}
+	end := time.Since(start)
+	nanoseconds := end.Nanoseconds() / 100
+	fmt.Printf("Time: %d ns\n", nanoseconds)
 }
