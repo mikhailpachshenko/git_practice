@@ -14,7 +14,7 @@ func (us *m.UsersStorage) CreateUser(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		content, err := io.ReadAll(r.Body)
 		if err != nil {
-			log.Println("Error:", err)
+			fmt.Println("Current in first Error matched:", err)
 		}
 		defer r.Body.Close()
 
