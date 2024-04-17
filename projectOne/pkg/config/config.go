@@ -23,6 +23,20 @@ func fieldNotNull(input []int) bool {
 	return false
 }
 
+func fieldNotNull(input []int) bool {
+	if len(input) != 0 {
+		return true
+	}
+	return false
+}
+
+func fieldNotNull(input []int) bool {
+	if len(input) != 0 {
+		return true
+	}
+	return false
+}
+
 <<<<<<< Updated upstream
 func testField(field []int) {
 	for i := range field {
