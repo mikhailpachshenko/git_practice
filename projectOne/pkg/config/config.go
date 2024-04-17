@@ -8,12 +8,12 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// same
 const (
 	host     = "localhost"
 	port     = 5432
 	user     = "mikhailpachshenko"
 	password = "1722"
-	dbname   = "project"
 )
 
 func fieldNotNull(input []int) bool {
@@ -47,7 +47,7 @@ func testField(field []int) {
 =======
 >>>>>>> Stashed changes
 func ConnectionDatabase() *sql.DB {
-	pgSqlConn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
+	pgSqlConn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=project sslmode=disable", host, port, user, password)
 	db, err := sql.Open("postgres", pgSqlConn)
 	if err != nil {
 		log.Fatalln(err)
