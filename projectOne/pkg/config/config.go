@@ -16,6 +16,13 @@ const (
 	dbname   = "project"
 )
 
+func fieldNotNull(input []int) bool {
+	if len(input) != 0 {
+		return true
+	}
+	return false
+}
+
 func ConnectionDatabase() *sql.DB {
 	pgSqlConn := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 	db, err := sql.Open("postgres", pgSqlConn)
