@@ -16,6 +16,13 @@ const (
 	dbname   = "project"
 )
 
+func fieldNotNull(input []int) bool {
+	if len(input) != 0 {
+		return true
+	}
+	return false
+}
+
 func testField(field []int) {
 	for i := range field {
 		field[i] = i

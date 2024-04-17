@@ -2,6 +2,7 @@ package handlers
 
 import (
 	"encoding/json"
+	"fmt"
 	"io"
 	"log"
 	"net/http"
@@ -24,6 +25,10 @@ func (us *m.UsersStorage) CreateUser(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusInternalServerError)
 			w.Write([]byte("Error:" + err.Error()))
 			return
+		}
+
+		if len(u.Name) < 2 {
+			fmt.Println("Короткое имя")
 		}
 
 		/* Обрабатываем ошибки */
