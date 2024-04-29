@@ -33,7 +33,14 @@ func (us *m.UsersStorage) CreateUser(w http.ResponseWriter, r *http.Request) {
 
 		/* Обрабатываем ошибки */
 
+		if len(u.Name) < 2 {
+			w.WriteHeader(http.StatusInternalServerError)
+			w.Write([]byte("SomeError"))
+			return
+		}
+
 		/* покдлючаемся к бд */
+
 	}
 
 }
