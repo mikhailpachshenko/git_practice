@@ -8,6 +8,7 @@
 *.so
 *.dylib
 *.DS_Store
+config.json
 
 # Test binary, built with `go test -c`
 *.test
