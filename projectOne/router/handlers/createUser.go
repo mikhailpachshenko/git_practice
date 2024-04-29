@@ -39,8 +39,6 @@ func (us *m.UsersStorage) CreateUser(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 
-		/* покдлючаемся к бд */
-
 	}
 
 }
