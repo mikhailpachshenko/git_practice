@@ -28,5 +28,3 @@ func loopInt(input int) (out int) {
 	}
 	return
 }
-
-// some text about included
