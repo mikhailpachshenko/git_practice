@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"fmt"
-	"io"
 	"os"
 )
 
@@ -15,17 +14,6 @@ func strScan(input string) (outStr string) {
 		fmt.Println("Out:", outStr)
 	}
 
-	return
-}
-
-func loopInt(input int) (out int) {
-	for {
-		_, err := fmt.Scan(&out)
-		if err == io.EOF {
-			return
-		}
-		fmt.Println("out:", out)
-	}
 	return
 }
 
