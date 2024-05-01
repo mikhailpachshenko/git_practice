@@ -1,3 +1,1 @@
 // begin
-// absdifghijklmnopqrstuvwxyz
-// абвгдеёжзийклмнопрстуфхцчшщъыьэюя

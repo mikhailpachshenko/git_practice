@@ -29,4 +29,8 @@ func loopInt(input int) (out int) {
 	return
 }
 
+<<<<<<< HEAD
 // asdfasfdaffaasdf
+=======
+// some text about included
+>>>>>>> parent of a75e055 (some changes minor)
